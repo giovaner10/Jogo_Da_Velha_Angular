@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
+## :framed_picture: Fotos do projeto
+
+ ![foto](https://github.com/giovaner10/templete_angular/blob/main/udemy%20-%20gerenciador%20de%20tarefas/1.png)
+ ![foto](https://github.com/giovaner10/templete_angular/blob/main/udemy%20-%20gerenciador%20de%20tarefas/2.png)
+ ![foto](https://github.com/giovaner10/templete_angular/blob/main/udemy%20-%20gerenciador%20de%20tarefas/3.png)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
