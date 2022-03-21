@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## :framed_picture: Fotos do projeto
 
- ![foto](https://github.com/giovaner10/templete_angular/blob/main/udemy%20-%20gerenciador%20de%20tarefas/1.png)
+ ![foto](https://github.com/giovaner10/templete_angular/blob/main/udmemy%20-%20jogo%20da%20velha/1.png)
  ![foto](https://github.com/giovaner10/templete_angular/blob/main/udemy%20-%20gerenciador%20de%20tarefas/2.png)
  ![foto](https://github.com/giovaner10/templete_angular/blob/main/udemy%20-%20gerenciador%20de%20tarefas/3.png)
 
