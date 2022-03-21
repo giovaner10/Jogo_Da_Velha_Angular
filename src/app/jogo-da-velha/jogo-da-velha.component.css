@@ -1,0 +1,83 @@
+div {
+    height: auto; 
+	width: 100%;
+	text-align: center;
+	font-family: 'Press Start 2P', cursive;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+div.principal {
+	margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tabuleiro{
+	width: 400px;
+}
+
+.numeroDeJogadores{
+	height: 250px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+.numeroDeJogadores P{
+	width: 250px;
+}
+
+.botao {
+	font-size: 20px;
+	background-color: rgb(233, 240, 233);
+	border: lightgreen 1px solid;
+
+	padding: 15px;
+	cursor: pointer;
+}
+
+a:link, a:visited {
+    background-color: white;
+    color: green;
+    text-decoration: none;
+    border: 4px solid green;
+}
+
+a:hover, a:active {
+    background-color: lightgreen;
+    color: green;
+    border: 4px solid green;
+}
+
+ul li {
+	list-style: none;
+	width: 110px;
+	height: 110px;
+	float: left;
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    cursor: pointer;
+}
+
+.kz-border-bottom {
+	border-bottom: 8px solid #333;
+}
+
+.kz-border-right {
+	border-right: 8px solid #333;
+}
+
+.kz-img-x {
+	background-image: url('/assets/imagens/x.png');
+}
+
+.kz-img-o {
+	background-image: url('/assets/imagens/o.png');
+}
+
+.kz-cor-vitoria {
+	 background-color: lightgreen;
+}

@@ -1,0 +1,152 @@
+<div>
+    <h2>Jogo da velha</h2>
+    
+    <!-- tela inicial -->
+    <div class="numeroDeJogadores" *ngIf="showInicio" >
+      <a href="#" 
+         class="botao"
+         (click)="iniciarJogo()">
+         Single Player
+      </a>
+      <a href="#" 
+         class="botao"
+         (click)="iniciarJogoDual()">
+         Dual Player
+      </a>
+    </div><!-- fim tela inicial -->
+  
+    <!-- tabuleiro -->
+    <div *ngIf="showTabuleiro" class="tabuleiro">
+      <ul>
+        <li class="kz-border-bottom kz-border-right"
+          [class.kz-img-x]="exibirX(0, 0)"
+          [class.kz-img-o]="exibirO(0, 0)"
+          [class.kz-cor-vitoria]="exibirVitoria(0, 0)"
+          (click)="jogar(0, 0)"></li>
+
+        <li class="kz-border-bottom kz-border-right"
+          [ngClass]= "{ 
+            'kz-img-x': exibirX(0, 1),
+            'kz-img-o': exibirO(0, 1),
+            'kz-cor-vitoria': exibirVitoria(0, 1) }"
+          (click)="jogar(0, 1)"></li>
+
+        <li class="kz-border-bottom"
+          [ngClass]= "{ 
+            'kz-img-x': exibirX(0, 2),
+            'kz-img-o': exibirO(0, 2),
+            'kz-cor-vitoria': exibirVitoria(0, 2) }"
+          (click)="jogar(0, 2)"></li>
+        <li class="kz-border-bottom kz-border-right"
+          [ngClass]= "{ 
+            'kz-img-x': exibirX(1, 0),
+            'kz-img-o': exibirO(1, 0),
+            'kz-cor-vitoria': exibirVitoria(1, 0) }"
+          (click)="jogar(1, 0)"></li>
+        <li class="kz-border-bottom kz-border-right"
+          [ngClass]= "{ 
+            'kz-img-x': exibirX(1, 1),
+            'kz-img-o': exibirO(1, 1),
+            'kz-cor-vitoria': exibirVitoria(1, 1) }"
+          (click)="jogar(1, 1)"></li>
+        <li class="kz-border-bottom"
+          [ngClass]= "{ 
+            'kz-img-x': exibirX(1, 2),
+            'kz-img-o': exibirO(1, 2),
+            'kz-cor-vitoria': exibirVitoria(1, 2) }"
+          (click)="jogar(1, 2)"></li>
+        <li class="kz-border-right"
+          [ngClass]= "{ 
+            'kz-img-x': exibirX(2, 0),
+            'kz-img-o': exibirO(2, 0),
+            'kz-cor-vitoria': exibirVitoria(2, 0) }"
+          (click)="jogar(2, 0)"></li>
+        <li class="kz-border-right"
+          [ngClass]= "{ 
+            'kz-img-x': exibirX(2, 1),
+            'kz-img-o': exibirO(2, 1),
+            'kz-cor-vitoria': exibirVitoria(2, 1) }"
+          (click)="jogar(2, 1)"></li>
+        <li [ngClass]= "{ 
+              'kz-img-x': exibirX(2, 2),
+              'kz-img-o': exibirO(2, 2),
+              'kz-cor-vitoria': exibirVitoria(2, 2) }"
+            (click)="jogar(2, 2)"></li>
+      </ul>
+    </div><!-- fim tabuleiro --> 
+
+    <div *ngIf="showTabuleiroDual" class="tabuleiro">
+        <ul>
+          <li class="kz-border-bottom kz-border-right"
+            [class.kz-img-x]="exibirX(0, 0)"
+            [class.kz-img-o]="exibirO(0, 0)"
+            [class.kz-cor-vitoria]="exibirVitoria(0, 0)"
+            (click)="jogarDualPlayer(0, 0)"></li>
+  
+          <li class="kz-border-bottom kz-border-right"
+            [ngClass]= "{ 
+              'kz-img-x': exibirX(0, 1),
+              'kz-img-o': exibirO(0, 1),
+              'kz-cor-vitoria': exibirVitoria(0, 1) }"
+            (click)="jogarDualPlayer(0, 1)"></li>
+  
+          <li class="kz-border-bottom"
+            [ngClass]= "{ 
+              'kz-img-x': exibirX(0, 2),
+              'kz-img-o': exibirO(0, 2),
+              'kz-cor-vitoria': exibirVitoria(0, 2) }"
+            (click)="jogarDualPlayer(0, 2)"></li>
+          <li class="kz-border-bottom kz-border-right"
+            [ngClass]= "{ 
+              'kz-img-x': exibirX(1, 0),
+              'kz-img-o': exibirO(1, 0),
+              'kz-cor-vitoria': exibirVitoria(1, 0) }"
+            (click)="jogarDualPlayer(1, 0)"></li>
+          <li class="kz-border-bottom kz-border-right"
+            [ngClass]= "{ 
+              'kz-img-x': exibirX(1, 1),
+              'kz-img-o': exibirO(1, 1),
+              'kz-cor-vitoria': exibirVitoria(1, 1) }"
+            (click)="jogarDualPlayer(1, 1)"></li>
+          <li class="kz-border-bottom"
+            [ngClass]= "{ 
+              'kz-img-x': exibirX(1, 2),
+              'kz-img-o': exibirO(1, 2),
+              'kz-cor-vitoria': exibirVitoria(1, 2) }"
+            (click)="jogarDualPlayer(1, 2)"></li>
+          <li class="kz-border-right"
+            [ngClass]= "{ 
+              'kz-img-x': exibirX(2, 0),
+              'kz-img-o': exibirO(2, 0),
+              'kz-cor-vitoria': exibirVitoria(2, 0) }"
+            (click)="jogarDualPlayer(2, 0)"></li>
+          <li class="kz-border-right"
+            [ngClass]= "{ 
+              'kz-img-x': exibirX(2, 1),
+              'kz-img-o': exibirO(2, 1),
+              'kz-cor-vitoria': exibirVitoria(2, 1) }"
+            (click)="jogarDualPlayer(2, 1)"></li>
+          <li [ngClass]= "{ 
+                'kz-img-x': exibirX(2, 2),
+                'kz-img-o': exibirO(2, 2),
+                'kz-cor-vitoria': exibirVitoria(2, 2) }"
+              (click)="jogarDualPlayer(2, 2)"></li>
+        </ul>
+      </div>
+  
+    <!-- tela final -->
+    
+    <section *ngIf="showFinal" class="numeroDeJogadores">
+        <p *ngIf="jogador==2 ">Você venceu!!!</p>
+        <p *ngIf="jogador==1">Você perdeu...</p>
+        <p *ngIf="jogador==0">O jogo terminou empatado...</p>
+
+        <div class="botao" (click)="novoJogo()">Single Player</div>
+        <div class="botao" (click)="novoJogoDual()">Dual Player</div>
+
+
+    </section>
+    
+    <!-- fim tela final -->
+  
+  </div>
